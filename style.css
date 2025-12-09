@@ -80,7 +80,7 @@
     .fade {
         opacity: 0;
         transform: translateY(30px);
-        transition: all 1s ease;
+        transition: all 2s ease;
     }
 
     .fade.show {
@@ -91,7 +91,7 @@
     .fade2 {
         opacity: 0;
         transform: translateX(100px);
-        transition: all 1s ease;
+        transition: all 2s ease;
     }
 
     .fade2.show {
@@ -102,7 +102,7 @@
     .fade3 {
         opacity: 0;
         transform: scale(0);
-        transition: all 1s ease;
+        transition: all 2s ease;
     }
 
     .fade3.show {
@@ -113,7 +113,7 @@
     .fade4 {
         opacity: 0;
         transform: translateX(-100px);
-        transition: all 1s ease;
+        transition: all 2s ease;
 
     }
 
@@ -137,7 +137,7 @@
     .fade6 {
         opacity: 0;
         transform: translateY(-300px);
-        transition: all 1s ease;
+        transition: all 2s ease;
 
     }
 
