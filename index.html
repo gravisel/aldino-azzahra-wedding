@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <!-- ADMIN LOGIN -->
+        <div class="dashboardLogin">
+            <div class="login-card">
+                <h2>Admin Login</h2>
+                <p class="subtitle">Akses panel link undangan</p>
+
+                <input id="admin-pass" type="password" placeholder="Masukkan password">
+
+                <button id="login-btn">Login</button>
+
+                <p id="login-error">Password salah!</p>
+            </div>
+            <div id="admin-panel" class="admin-panel">
+                <h2 class="panel-title">Admin Panel</h2>
+                <p class="panel-subtitle">Generator Link Tamu — Undangan Digital</p>
+
+                <label class="input-label">Nama Tamu</label>
+                <input id="nama-client" type="text" class="input-field" placeholder="Masukkan nama tamu">
+
+                <button id="generate" class="btn-generate">
+                    Generate Link
+                </button>
+
+                <label class="input-label" style="margin-top:20px;">Link Undangan</label>
+                <input id="link-output" class="input-field" readonly> <br>
+                <button class="copy-btn3" style="margin-top: 5px;">Copy Link</button>
+                <div id="toast3" class="toast3">Link berhasil dicopy✅</div>
+            </div>
+        </div>
+
+        <div id="cover" class="cover">
+            <div class="cover1">
+                <p class="wedding-title">The Wedding Of</p>
+                <div class="namaPasangan">
+                    <h1 style="font-size: 25px;">Aldino</h1>
+                    <h1 style="font-size: 25px;">&</h1>
+                    <h1 style="font-size: 25px;">Azzahra</h1>
+                </div>
+            </div>
+            <div class="cover2">
+                <h2>Kepada Yth.</h2>
+                <h1 id="guest-name" style="font-size: 25px; margin: 5px;">Nama Tamu</h1>
+                <h2>Di Tempat</h2>
+                <button id="open-btn">Buka Undangan</button>
+            </div>
+            <audio id="musik" src="musik/lesungPipi.MP3" autoplay loop></audio>
+
+        </div>
+
+        <div class="undangan">
+
+            <div class="contentA">
+                <p class="fade wedding-title">The Wedding Of</p>
+                <div class="namaPasangan">
+                    <h1 class="fade">Aldino</h1>
+                    <h1 class="fade">&</h1>
+                    <h1 class="fade">Azzahra</h1>
+                </div>
+                <div class="countdown fade">
+                    <p>Menuju Hari Bahagia 💍</p> <br>
+                    <div class="timer">
+                        <div class="time-box">
+                            <h3 id="days">0</h3>
+                            <p>Hari</p>
+                        </div>
+                        <div class="time-box">
+                            <h3 id="hours">0</h3>
+                            <p>Jam</p>
+                        </div>
+                        <div class="time-box">
+                            <h3 id="minutes">0</h3>
+                            <p>Menit</p>
+                        </div>
+                        <div class="time-box">
+                            <h3 id="seconds">0</h3>
+                            <p>Detik</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="wedding-date fade">Minggu, 8 Februari 2026</p>
+            </div>
+
+
+            <div class="contentB">
+                <h2 class="fade3">A & A</h2>
+                <div class="carousel">
+                    <div class="group">
+                        <div class="card"><img src="img/1.jpg" alt=""></div>
+                        <div class="card"><img src="img/2.jpg" alt=""></div>
+                        <div class="card"><img src="img/3.jpg" alt=""></div>
+                        <div class="card"><img src="img/4.jpg" alt=""></div>
+                        <div class="card"><img src="img/5.jpg" alt=""></div>
+                        <div class="card"><img src="img/6.jpg" alt=""></div>
+                    </div>
+                    <div aria-hidden class="group">
+                        <div class="card"><img src="img/1.jpg" alt=""></div>
+                        <div class="card"><img src="img/2.jpg" alt=""></div>
+                        <div class="card"><img src="img/3.jpg" alt=""></div>
+                        <div class="card"><img src="img/4.jpg" alt=""></div>
+                        <div class="card"><img src="img/5.jpg" alt=""></div>
+                        <div class="card"><img src="img/6.jpg" alt=""></div>
+                    </div>
+                </div>
+                <h3 class="fade"> Pasangan Mempelai </h3> <br>
+                <p class="fade3">Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Sdr/i untuk
+                    menghadiri
+                    acara pernikahan kami :</p>
+                <div class="mempelai">
+                    <div class="fotoMempelai fade6"><img src="img/00-Groom.jpg" alt=""></a></div>
+                    <h1 class="fade">Aldino Fajar</h1>
+                    <a class="fade3" href="https://www.instagram.com/hariyanto_agus1/" target="_blank" rel="noopener noreferrer"><img src="img/instagram.png" alt="" >
+                        <p>aldino.fajar</p>
+                    </a>
+                    <p class="fade">Putra dari<br>Bapak Ahmad Syafruddin & Ibu Nur Asiyah</p>
+
+                </div>
+                <h3 class="fade">dengan</h3>
+                <div class="mempelai">
+                    <div class="fotoMempelai fade6"><img src="img/00-Bride.jpg" alt=""></div>
+                    <h1 class="fade">Nadila Azzahra</h1>
+                    <a class="fade3" href="https://www.instagram.com/laila_hlmts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer"><img src="img/instagram.png" alt="">
+                        <p>nadila.azzahra</p>
+                    </a>
+                    <p class="fade">Putri dari<br>Bapak Budi Santoso & Ibu Siti Marfu’ah</p>
+                </div>
+            </div>
+
+            <div class="contentC">
+                <div class="fotoC1 fade"><img src="img/3.jpg" alt=""></div>
+                <p class="fade" style="text-align: center;">" Dan di antara tanda-tanda kekuasaan-Nya diciptakan-Nya
+                    untukmu
+                    pasangan hidup dari jenismu
+                    sendiri
+                    supaya kamu dapat ketenangan hati dan dijadikannya kasih sayang di antara kamu. Sesungguhnya yang
+                    demikian menjadi tanda-tanda kebesaran-Nya bagi orang-orang yang berpikir. " <br><br>
+                    ~ Q.S Ar-Rum : 21 ~</p>
+                <div style="margin: 40px 0; border: 2px solid white; padding: 20px; border-radius: 8px;">
+                    <h1>- Love Story -</h1> <br>
+                    <p style="text-align: justify;">Pertemuan mereka bermula dari sebuah acara sederhana di mana Aldino
+                        dan
+                        Azzahra dipertemukan tanpa
+                        pernah menyangka bahwa hari itu akan mengubah hidup keduanya. Dari sapaan kecil yang penuh
+                        canggung,
+                        tumbuh percakapan panjang yang membuat keduanya merasa
+                        nyaman. <br><br> Hari demi hari, Aldino dan Azzahra menemukan bahwa mereka saling melengkapi.
+                        Aldino yang penuh ketenangan dan Azzahra yang lembut membuat setiap langkah terasa lebih ringan.
+                        Kini, dengan hati yang mantap, mereka memilih untuk menapaki perjalanan baru sebagai pasangan
+                        sehidup semati.</p>
+                </div>
+            </div>
+
+            <div class="contentD">
+                <h1>Save The Date</h1>
+                <div class="akadNikah" style="padding: 10px;">
+                    <h2 class="fade2">Akad Nikah</h2>
+                    <div class="garis-full"
+                        style="left: 50%; width: 2px; background-color: rgb(255, 255, 255); padding: 20px 0; margin: 5px 50%;">
+                    </div>
+                    <p class="fade4">Minggu, 8 Februari 2026</p>
+                    <p class="fade2">Pukul 08.00 WIB</p>
+                    <div class="garis-full"
+                        style="left: 50%; width: 2px; background-color: rgb(255, 255, 255); padding: 20px 0; margin: 5px 50%;">
+                    </div>
+                    <p class="fade4">Bertempat di: <br>Assembly Hall Menara Mandiri</p>
+                    <div class="map-card fade" data-alamat="Assembly Hall Menara Mandiri by IKK Indonesia">
+
+                        <div class="map-text">
+                            <p>Google Map</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resepsi fade" style="padding: 10px;">
+                    <h2 class="fade2">Resepsi</h2>
+                    <div class="garis-full"
+                        style="left: 50%; width: 2px; background-color: rgb(255, 255, 255); padding: 20px 0; margin: 5px 50%;">
+                    </div>
+                    <p class="fade4">Minggu, 8 Februari 2026</p>
+                    <p class="fade2">Pukul 13.00 WIB</p>
+                    <div class="garis-full"
+                        style="left: 50%; width: 2px; background-color: rgb(255, 255, 255); padding: 20px 0; margin: 5px 50%;">
+                    </div>
+                    <p class="fade4">Bertempat di: <br>Assembly Hall Menara Mandiri</p>
+                    <div class="map-card fade" data-alamat="Assembly Hall Menara Mandiri by IKK Indonesia">
+
+                        <div class="map-text">
+                            <p>Google Map</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contentE">
+                <h1>Our Gallery</h1>
+                <div class="view ">
+                    <div class="img-box fade3"><img src="img/1.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/2.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/3.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/4.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/5.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/6.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/7.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/1.jpg" alt="" class="lazy-img"></div>
+                    <div class="img-box fade3"><img src="img/2.jpg" alt="" class="lazy-img">
+                    </div>
+                    <div class="img-box fade3"><img src="img/3.jpg" alt="" class="lazy-img"> </div>
+                </div>
+                <div id="lightbox-overlay">
+                    <span id="close-btn">×</span>
+                    <span id="prev-btn" class="lightbox-btn">‹</span>
+                    <img id="lightbox-img" src="" alt="">
+                    <span id="next-btn" class="lightbox-btn">›</span>
+                </div>
+                <div class="gift">
+                    <h1>Wedding Gift</h1>
+                    <img src="img/gift.png" alt="" class="giftImg fade3">
+                    <p class="fade">Dengan segala hormat, bagi para tamu yang berkenan memberikan hadiah kepada kedua
+                        mempelai, dapat mengirimkannya melalui :</p>
+                    <button class="giftCollaps">Klik Disini</button>
+                    <div class="containerBank">
+                        <div class="bank">
+                            <img src="img/BNI.png" alt="">
+                            <p>1791574942<br>A/N Aldino Fajar</p>
+                            <button class="copy-btn" data-rekening="1791574942">Salin</button>
+                            <button id="gift-wa">Confirm WA</button>
+                        </div>
+                        <div class="bank">
+                            <img src="img/images.png" alt="">
+                            <p>1791574942<br>A/N Nadila Azzahra</p>
+                            <button class="copy-btn" data-rekening="1791574942">Salin</button>
+                            <button id="gift-wa">Confirm WA</button>
+                        </div>
+                        <div class="giftBarang">
+                            <p>Anda juga bisa mengirim kado fisik ke alamat berikut.</p><br>
+                            <p>alamat</p>
+                            <p><b>Perumahan Cendana Asri Blok B5 No. 18, Kel. Mulyorejo, Kec. Lestari, Kota Gadingputih,
+                                    53122 <br>
+                                    Penerima : Azzahra</b></p><br>
+                            <button class="copy-btn2"
+                                data-alamat="Perumahan Cendana Asri Blok B5 No. 18,Kel. Mulyorejo, Kec. Lestari, Kota Gadingputih, 53122">Salin</button>
+                            <button id="gift-wa">Confirm Via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Toast -->
+                    <div id="toast" class="toast">Nomor rekening berhasil disalin✅</div>
+                    <div id="toast2" class="toast2">Alamat penerima berhasil disalin✅</div>
+
+                </div>
+            </div>
+
+            <section class="contentG">
+                <h1 class="fade">RSVP<br>(Konfirmasi Kehadiran)</h1><br>
+                <label class="fade3">Nama</label><br>
+                <input class="fade2" id="rsvp-name" placeholder="Nama Anda"
+                    style="padding: 0 10px; border-radius:8px; border: 2px solid white" /> <br><br>
+                <label class="fade3">Alamat (opsional)</label><br>
+                <input class="fade2" id="rsvp-address" placeholder="Alamat atau asal"
+                    style="padding: 0 10px; border-radius:8px; border: 2px solid white;" /><br><br>
+                <label>Status Kehadiran</label>
+                <div class="fade3">
+                    <label><input type="radio" name="rsvp-status" value="Datang"> Datang</label><br>
+                    <label><input type="radio" name="rsvp-status" value="Ragu"> Ragu</label><br>
+                    <label><input type="radio" name="rsvp-status" value="Maaf tidak datang"> Maaf tidak datang</label>
+                </div> <br>
+                <button id="rsvp-send">Kirim Konfirmasi</button>
+                <div id="rsvp-loading">
+                    <div class="spinner"></div>
+                    <span>Memproses...</span>
+                </div>
+                <button id="rsvp-wa" style="background:#25D366;color:white">Reservasi via WhatsApp</button>
+                <div id="rsvp-status-text"></div>
+            </section>
+
+
+            <section class="contentH">
+                <h1>Ucapan</h1><br>
+                <p class="fade">Sampaikan ucapan selamat dan doa restu kepada kedua mempelai pada hari bahagia mereka
+                    melalui kolom berikut :</p><br>
+                <label class="fade3" for="name">Nama (opsional)</label>
+                <input class="fade2" id="name" placeholder="nama / panggilan"
+                    style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd;margin-top:6px" />
+
+                <label class="fade3" for="message" style="margin-top:8px;display:block">Komentar</label>
+                <textarea class="fade2" id="message" placeholder="Tulis pesan atau ucapan..."></textarea>
+                <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+                    <button id="send">Kirim</button>
+                    <div id="status" style="font-size:13px;color:#ffffff"></div>
+                </div>
+            </section>
+
+            <div class="komen">
+                <h3>Komentar Publik</h3>
+                <section class="card5">
+                    <div id="comments">Memuat komentar...</div>
+                </section>
+            </div>
+
+
+            <div class="contentI">
+                <h1 class="fade">Terima Kasih</h1><br>
+                <p class="fade3">Atas kehadiran, doa restu, dan kasih sayang yang diberikan. Semoga Allah SWT senantiasa
+                    melimpahkan rahmat, kedamaian, dan keberkahan kepada kita semua. <br>Aamiin...</p>
+                <div class="contentI1">
+                    <p>Kami yang berbahagia,</p>
+                    <div class="keluarga fade2">
+                        <P>Keluarga</P>
+                        <h2>Bapak Ahmad Syafruddin & Ibu Nur Asiyah</h2>
+                    </div>
+                    <div class="keluarga fade4">
+                        <P>Keluarga</P>
+                        <h2>Bapak Budi Santoso & Ibu Siti Marfu’ah</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentJ">
+                <p>created by </p> <img src="img/Logo Gravisel Pjg.png" alt="">
+            </div>
+
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+        <!-- file JS eksternal (letakkan setelah SDK atau gunakan defer) -->
+        <script src="script.js" defer></script>
+    </div>
+</body>
+
+</html>
