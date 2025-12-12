@@ -601,8 +601,6 @@
             url('img/5.jpg');
         background-size: cover;
         min-height: 100vh;
-        background-attachment: fixed;
-        /* ⭐ background tidak ikut bergerak */
         background-position: center;
         background-repeat: no-repeat;
         overflow: hidden;
@@ -1204,8 +1202,6 @@
         margin: 10px auto;
         color: #ffffff;
         padding: 20px;
-        background-attachment: fixed;
-        /* ⭐ background tidak ikut bergerak */
         background-position: center;
         background-repeat: no-repeat;
 

@@ -1,23 +1,39 @@
-//animasi cover
+// --- Animasi cover & mulai musik ---
 const cover = document.getElementById("cover");
 const openBtn = document.getElementById("open-btn");
-const undangan = document.querySelector('.undangan')
-const musik = document.querySelector('#musik');
+const undangan = document.querySelector(".undangan");
+const musik = document.querySelector("#musik");
+
+// Pastikan musik tidak autoplay (diblock HP)
 musik.pause();
 
-openBtn.addEventListener("click", () => {
+// Tombol "Buka Undangan"
+openBtn.addEventListener("click", async () => {
     cover.classList.add("hide");
-    undangan.classList.add('relative');
+    undangan.classList.add("relative");
+
+    // Mulai musik setelah transisi
     setTimeout(() => {
-        musik.play();
-    }, 400); // timing pas setelah cover mulai geser
+        musik.play().catch(() => { });
+    }, 400);
+
+    // --- Play suara AI ElevenLabs ---
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get("to")?.trim() || "Tamu Undangan";
+
+    const aiVoice = new Audio(`http://localhost:3000/voice?to=${encodeURIComponent(nama)}`);
+    aiVoice.play().catch(() => { });
 });
 
 
+// --- Ambil nama tamu dari URL ---
 const params = new URLSearchParams(window.location.search);
-const guest = params.get("to");
-if (guest) {
-    document.getElementById("guest-name").textContent = guest;
+const nama = params.get("to")?.trim() || "Tamu Undangan";
+
+// Tampilkan nama tamu
+const guestElement = document.getElementById("guest-name");
+if (guestElement) {
+    guestElement.textContent = nama;
 }
 
 //animasi
@@ -428,4 +444,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 2000);
     }
 });
-
